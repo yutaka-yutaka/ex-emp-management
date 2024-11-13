@@ -6,7 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.view.RedirectView;
 
 import com.example.domain.Administrator;
 import com.example.form.InsertAdministratorForm;
@@ -50,7 +49,7 @@ public class AdministratorController {
     @GetMapping("/")
     public String tologin(LoginForm form, Model model) {
         model.addAttribute("form", form);
-        return "administrator/login.html";
+        return "administrator/login";
     }
 
     @PostMapping("/login")

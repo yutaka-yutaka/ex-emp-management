@@ -37,7 +37,7 @@ public class EmployeeRepository {
 
     // データベースから全ての従業員を取得するメソッドの例
     public List<Employee> findAll() {
-        String sql = "SELECT * FROM employees";
+        String sql = "SELECT * FROM employees ORDER BY hire_date DESC";
         return template.query(sql, employeeRowMapper);
     }
 
