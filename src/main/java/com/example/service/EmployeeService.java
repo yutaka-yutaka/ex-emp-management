@@ -24,4 +24,13 @@ public class EmployeeService {
         return employeeRepository.findAll();
     }
 
+    /**
+     * 従業員情報を取得する。
+     * employeeRepositoryのload()メソッドを呼び出しリターンする。
+     *
+     */
+    public Employee showDetail(Integer id){
+        return employeeRepository.load(id);
+    }
+
 }
