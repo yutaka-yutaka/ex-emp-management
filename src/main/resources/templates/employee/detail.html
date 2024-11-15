@@ -75,10 +75,7 @@
                 <tr>
                   <th nowrap>写真</th>
                   <td>
-                    <img th:unless="${employee.gender == '女'}" th:src="@{/img/e1.png}" />
-                    <img th:if="${employee.gender == '女'}" th:src="@{/img/e2.png}" />
-
-
+                    <img th:src="@{'/img/' + ${employee.image}}" />
                   </td>
                 </tr>
                 <tr>
